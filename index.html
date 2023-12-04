@@ -1,0 +1,1225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Landingpage</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100&family=Roboto+Condensed:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="headerSection">
+      <header
+        class="navigation w-full flex justify-between px-6 py-3 tablet:px-12 tablet:py-8 items-center text-white z-10 fixed"
+      >
+        <!--logga från pub -->
+        <div
+          class="svg-container w-[72px] h-[72px] fill-white z-[100]"
+          id="svg-container"
+        ></div>
+
+        <!--hamburger menu-->
+        <div class="flex justify-end w-full laptop:hidden">
+          <button
+            title="open nav btn"
+            type="button"
+            class="open-nav-btn text-white"
+            id="open-nav-btn"
+          >
+            <i class="fa-solid fa-bars text-4xl"></i>
+          </button>
+          <button
+            title="close nav btn"
+            type="button"
+            class="close-nav-btn text-chasBlack justify-end font-medium z-[100] hidden text-7xl"
+          >
+            &times;
+          </button>
+        </div>
+
+        <!--Mobile Menu-->
+        <div
+          class="hidden fixed mobile-nav-container z-10 bg-white text-chasBlack top-0 left-0 w-screen min-h-screen transion left 0.3 ease-in-out"
+        >
+          <ul class="pt-[124px] px-6 pb-[130px] text-lg font-medium">
+            <li class="mb-6">
+              <div class="flex flex-row items-center">
+                <span>YH-program</span
+                ><svg viewBox="0 0 13 8" fill="black" class="ml-2 w-4 h-4">
+                  <path d="M12 1 6.38 6.03 1 1.215"></path>
+                </svg>
+              </div>
+            </li>
+            <li class="mb-6">
+              <a class="" href="#">ChasUpskill</a>
+            </li>
+            <li class="mb-6">
+              <a class="" href="#">Så ansöker du</a>
+            </li>
+            <li class="mb-6">
+              <div class="flex flex-row items-center">
+                <span>Om oss</span>
+                <svg viewBox="0 0 13 8" fill="black" class="ml-2 w-4 h-4">
+                  <path d="M12 1 6.38 6.03 1 1.215"></path>
+                </svg>
+              </div>
+            </li>
+            <li class="mb-6">
+              <a class="" href="#">Aktuellt</a>
+            </li>
+
+            <li class="">
+              <button
+                title="aply btn"
+                type="button"
+                class="rounded-full border uppercase font-medium text-lg text-white bg-chasBlue px-6 py-1"
+              >
+                Ansök
+              </button>
+            </li>
+          </ul>
+        </div>
+
+        <!--desktop nav menu-->
+        <nav class="hidden laptop:flex gap-6">
+          <ul class="flex gap-6 items-center text-lg">
+            <li class="hover:underline font-medium flex items-center">
+              <span>YH-program</span>
+              <svg viewBox="0 0 13 8" fill="white" class="ml-2 w-4 h-4">
+                <path d="M12 1 6.38 6.03 1 1.215"></path>
+              </svg>
+            </li>
+            <li class="hover:underline font-medium">
+              <a href="">ChasUpskill</a>
+            </li>
+            <li class="hover:underline font-medium">
+              <a href="">Så ansöker du</a>
+            </li>
+            <li class="hover:underline font-medium flex items-center">
+              <span>Om oss</span>
+              <svg viewBox="0 0 13 8" fill="white" class="ml-2 w-4 h-4">
+                <path d="M12 1 6.38 6.03 1 1.215"></path>
+              </svg>
+            </li>
+            <li class="hover:underline font-medium"><a href="">Aktuellt</a></li>
+          </ul>
+
+          <button
+            type="button"
+            class="bg-chasBlue hover:bg-transparent hover:text-chasBlue hover:border hover:border-chasBlue px-6 py-1.5 rounded-full font-medium uppercase text-white"
+          >
+            Ansök
+          </button>
+        </nav>
+      </header>
+      <!--section one - hero -->
+      <div
+        class="flex flex-col items-center text-white pt-[144px] pb-9 px-6 min-h-[528px] laptop:min-h-[670px] laptop:pt-[230px] laptop:px-[83px]"
+      >
+        <div
+          class="w-[95%] max-w-[438px] text-[40px] tablet:text-6xl text-center leading-[110%] laptop:max-w-[670px]"
+        >
+          VILL DU VARA MED PÅ RESAN TILL VÄRLDENS BÄSTA BRANSCH?
+        </div>
+        <div
+          class="text-center text-lg leading-[120%] mt-10 max-w-[284px] laptop:mt-16"
+        >
+          KOM ETT STEG NÄRMARE EN KARRIÄR INOM IT MED VÅRA UTBILDNINGAR
+          <button
+            id="hero-btn"
+            class="block justify-center mx-auto bg-chasBlue p-2 rounded-full mt-5"
+          >
+            <img
+              src="/assets/svg/arrow-down.svg"
+              alt="arrow down"
+              id="hero-arrow"
+              class="fill-white w-6 h-6"
+            />
+          </button>
+        </div>
+      </div>
+    </div>
+    <!--get to know section 2-->
+    <div class="sectionContainer bg-slate-50">
+      <div
+        class="grid grid-cols-4 gap-[16px] laptop:grid-cols-12 laptop:gap-4 laptop:w-fit"
+      >
+        <div
+          class="col-span-4 relative overflow-hidden h-full w-full laptop:col-span-5"
+        >
+          <img
+            src="/assets/images/get-to-know.webp"
+            alt="get to know img"
+            class="rounded-2xl bg-no-repeat bg-contain w-full h-auto laptop:aspect-w-[5] laptop:aspect-h-[4]"
+          />
+        </div>
+        <div
+          class="col-span-4 flex flex-col mt-[36px] justify-center mb-0 tablet:mt-10 laptop:col-start-7 laptop:col-span-6 laptop:mt-0 laptop:mb-0"
+        >
+          <h3
+            class="uppercase font-medium laptop:leading[150%] laptop:text-[18px]"
+          >
+            Lär känna oss
+          </h3>
+          <h1
+            class="uppercase mt-4 text-4xl leading-[110%] font-semibold laptop:text-[48px] laptop:mt-[20px] laptop:font-medium"
+          >
+            Chas Academy
+          </h1>
+          <p class="mt-8 laptop:text-[18px] laptop:leading-[150%]">
+            Vi kan IT! Och snart kan du också det. Med pedagogik och kunskap
+            stöttar våra branschledande huvudlärare studenter i resan från
+            drömjobb till verklighet. Här på Chas Academy är vi ett litet gäng
+            som drivs av samma mål - att bygga de bästa IT-utbildningarna som
+            leder till en framtid inom design och utveckling. Som del av det
+            ledande bolaget inom IT, Chas Visual Management, har vi 10 års
+            branscherfarenhet i ryggen och ett engagerat nätverk vid vår sida.
+            Välkommen att joina oss på Chas Academy!
+          </p>
+          <div
+            class="grid grid-cols-1 gap-4 mt-12 tablet:grid-cols-2 tablet:gap-6 w-fit laptop:gap-10"
+          >
+            <button
+              type="button"
+              class="btn text-white bg-chasBlack hover:bg-white hover:text-chasBlack"
+            >
+              Ansök direkt
+            </button>
+            <button
+              type="button"
+              class="btn text-chasBlack bg-white hover:bg-chasBlack hover:text-white"
+            >
+              Läs mer om oss
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--section 3 - greatest -->
+    <div class="sectionContainer">
+      <h3 class="text-lg font-medium mb-4 laptop:mb-5">Våra YH-program</h3>
+      <h1
+        class="text-3xl text-chasBlack leading-[110%] font-semibold mb-6 uppercase laptop:mb-8 laptop:font-medium laptop:text-[50px]"
+      >
+        VAD VILL DU BLI BÄST PÅ?
+      </h1>
+      <div class="mb-10">
+        <p
+          class="tablet:w-[70%] leading-[130%] laptop:text-[18px] laptop:leading-[150%]"
+        >
+          Att utveckla tjänster, appar och system är de mest eftertraktade och
+          svårrekryterade kompetenserna idag. Därför finns vi! Tillsammans med
+          lärare från branschen får du redan från start verklighetsbaserade
+          uppdrag inom utveckling och design. Efter dina två år hos oss är du
+          precis den kunniga IT-specialisten som marknaden skriker efter. <br />
+          <br />
+          Har du svårt att veta vilken väg som är rätt för just dig? <br />
+          Gör vårt yrkestest för att se vilket av våra program som passar dig
+          bäst!
+        </p>
+      </div>
+      <!--containers-->
+      <div class="grid gap-5 tablet:grid-cols-2">
+        <a href="">
+          <div
+            class="flex items-center py-2 pl-2.5 pr-6 border bg-slate-50 border-slate-50 rounded-[10px] hover:transition-transform hover:border-chasBlack hover:scale-[1.01]"
+          >
+            <div class="w-[60px] h-[60px] laptop:h-[70px] laptop:w-[70px]">
+              <img
+                src="/assets/images/menu.webp"
+                alt="fullstack"
+                class="left-0 top-0 h-full w-full object-cover"
+              />
+            </div>
+            <h4
+              class="uppercase text-xl ml-2 leading-[130%] laptop:ml-4 laptop:leading-[150%] laptop:text-[22px]"
+            >
+              Fullstack Webbutvecklare
+            </h4>
+          </div>
+        </a>
+        <a href="">
+          <div
+            class="flex items-center py-2 pl-2.5 pr-6 border bg-slate-50 border-slate-50 rounded-[10px] hover:transition-transform hover:border-chasBlack hover:scale-[1.01]"
+          >
+            <div class="w-[60px] h-[60px] laptop:h-[70px] laptop:w-[70px]">
+              <img
+                src="/assets/images/menu2.webp"
+                alt="fullstack"
+                class="left-0 top-0 h-full w-full object-cover"
+              />
+            </div>
+            <h4
+              class="uppercase text-xl ml-2 leading-[130%] laptop:ml-4 laptop:leading-[150%] laptop:text-[22px]"
+            >
+              Fullstack .NET
+            </h4>
+          </div>
+        </a>
+        <a href="">
+          <div
+            class="flex items-center py-2 pl-2.5 pr-6 border bg-slate-50 border-slate-50 rounded-[10px] hover:transition-transform hover:border-chasBlack hover:scale-[1.01]"
+          >
+            <div class="w-[60px] h-[60px] laptop:h-[70px] laptop:w-[70px]">
+              <img
+                src="/assets/images/menu3.webp"
+                alt="fullstack"
+                class="left-0 top-0 h-full w-full object-cover"
+              />
+            </div>
+            <h4
+              class="uppercase text-xl ml-2 leading-[130%] laptop:ml-4 laptop:leading-[150%] laptop:text-[22px]"
+            >
+              Fullstack JavaScript
+            </h4>
+          </div>
+        </a>
+        <a href="">
+          <div
+            class="flex items-center py-2 pl-2.5 pr-6 border bg-slate-50 border-slate-50 rounded-[10px] hover:transition-transform hover:border-chasBlack hover:scale-[1.01]"
+          >
+            <div class="w-[60px] h-[60px] laptop:h-[70px] laptop:w-[70px]">
+              <img
+                src="/assets/images/menu3.webp"
+                alt="fullstack"
+                class="left-0 top-0 h-full w-full object-cover"
+              />
+            </div>
+            <h4
+              class="uppercase text-xl ml-2 leading-[130%] laptop:ml-4 laptop:leading-[150%] laptop:text-[22px]"
+            >
+              Fullstack JavaScript, extended
+            </h4>
+          </div>
+        </a>
+        <a href="">
+          <div
+            class="flex items-center py-2 pl-2.5 pr-6 border bg-slate-50 border-slate-50 rounded-[10px] hover:transition-transform hover:border-chasBlack hover:scale-[1.01]"
+          >
+            <div class="w-[60px] h-[60px] laptop:h-[70px] laptop:w-[70px]">
+              <img
+                src="/assets/images/devops.webp"
+                alt="fullstack"
+                class="left-0 top-0 h-full w-full object-cover"
+              />
+            </div>
+            <h4
+              class="uppercase text-xl ml-2 leading-[130%] laptop:ml-4 laptop:leading-[150%] laptop:text-[22px]"
+            >
+              Devops engineer
+            </h4>
+          </div>
+        </a>
+        <a href="">
+          <div
+            class="flex items-center py-2 pl-2.5 pr-6 border bg-slate-50 border-slate-50 rounded-[10px] hover:transition-transform hover:border-chasBlack hover:scale-[1.01]"
+          >
+            <div class="w-[60px] h-[60px] laptop:h-[70px] laptop:w-[70px]">
+              <img
+                src="/assets/images/frontend.webp"
+                alt="fullstack"
+                class="left-0 top-0 h-full w-full object-cover"
+              />
+            </div>
+            <h4
+              class="uppercase text-xl ml-2 leading-[130%] laptop:ml-4 laptop:leading-[150%] laptop:text-[22px]"
+            >
+              Frontendutvecklare för mobil och webb
+            </h4>
+          </div>
+        </a>
+        <a href="">
+          <div
+            class="flex items-center py-2 pl-2.5 pr-6 border bg-slate-50 border-slate-50 rounded-[10px] hover:transition-transform hover:border-chasBlack hover:scale-[1.01]"
+          >
+            <div class="w-[60px] h-[60px] laptop:h-[70px] laptop:w-[70px]">
+              <img
+                src="/assets/images/ux.webp"
+                alt="fullstack"
+                class="left-0 top-0 h-full w-full object-cover"
+              />
+            </div>
+            <h4
+              class="uppercase text-xl ml-2 leading-[130%] laptop:ml-4 laptop:leading-[150%] laptop:text-[22px]"
+            >
+              UX/UI-Designer med frontendkompetens
+            </h4>
+          </div>
+        </a>
+        <a href="">
+          <div
+            class="flex items-center py-2 pl-2.5 pr-6 border bg-slate-50 border-slate-50 rounded-[10px] hover:transition-transform hover:border-chasBlack hover:scale-[1.01]"
+          >
+            <div class="w-[60px] h-[60px] laptop:h-[70px] laptop:w-[70px]">
+              <img
+                src="/assets/images/ux2.webp"
+                alt="fullstack"
+                class="left-0 top-0 h-full w-full object-cover"
+              />
+            </div>
+            <h4
+              class="uppercase text-xl ml-2 leading-[130%] laptop:ml-4 laptop:leading-[150%] laptop:text-[22px]"
+            >
+              UX-Designer med kravkompetens
+            </h4>
+          </div>
+        </a>
+        <a href="">
+          <div
+            class="flex items-center py-2 pl-2.5 pr-6 border bg-slate-50 border-slate-50 rounded-[10px] hover:transition-transform hover:border-chasBlack hover:scale-[1.01]"
+          >
+            <div class="w-[60px] h-[60px] laptop:h-[70px] laptop:w-[70px]">
+              <img
+                src="/assets/images/system.webp"
+                alt="fullstack"
+                class="left-0 top-0 h-full w-full object-cover"
+              />
+            </div>
+            <h4
+              class="uppercase text-xl ml-2 leading-[130%] laptop:ml-4 laptop:leading-[150%] laptop:text-[22px]"
+            >
+              Systemutvecklare C/C++, extended
+            </h4>
+          </div>
+        </a>
+      </div>
+      <div class="mt-10 flex flex-col w-fit gap-4 tablet:flex-row tablet:mt-16">
+        <a href="">
+          <button
+            type="button"
+            class="btn bg-black text-white hover:bg-white hover:text-black font-medium"
+          >
+            Läs mer om YH-Utbildningarna
+          </button>
+        </a>
+        <a href="">
+          <button type="button" class="btn hover:bg-black hover:text-white">
+            CHAS Upskill
+          </button>
+        </a>
+      </div>
+    </div>
+    <!--section 4 - kickstart-->
+    <div class="sectionContainer bg-slate-50">
+      <div class="grid w-full gap-4 grid-cols-1 tablet:grid-cols-3">
+        <h2
+          class="text-[32px] font-medium mb-10 uppercase tablet:col-span-3 tablet:text-center laptop:mb-20 laptop:text-[36px]"
+        >
+          Kickstarta din karriär hos oss
+        </h2>
+
+        <div class="relative mb-6 tablet:col-span-1">
+          <div class="mb-6 laptop:mb-10">
+            <video
+              playsinline=""
+              autoplay=""
+              loop=""
+              type="video/mp4"
+              poster="https://image.mux.com/qMR9Lhu6QZvMwf016waDClv6T3ezFRw6K/thumbnail.png"
+              src="https://stream.mux.com/qMR9Lhu6QZvMwf016waDClv6T3ezFRw6K/high.mp4"
+              class="rounded-2xl object-cover w-full h-full"
+            ></video>
+          </div>
+          <h4 class="text-xl font-medium">Om skolan</h4>
+          <div class="mt-2">
+            <p
+              class="leading-[130%] text-chasBlack laptop:leading-[150%] laptop:text-[18px]"
+            >
+              YH-utbildning ska leda till jobb. Det gör det också! (källa
+              MYH.se) Med Chas Visual Management i ryggen har vi med oss 10 år
+              av branscherfarenhet. Det hjälper när vi hjälper dig ta ditt
+              första steg i en ny karriär.
+            </p>
+          </div>
+        </div>
+
+        <div class="relative mb-6 tablet:col-span-1">
+          <div class="mb-6 laptop:mb-10">
+            <video
+              playsinline=""
+              autoplay=""
+              loop=""
+              type="video/mp4"
+              poster="https://image.mux.com/f01uc8wFVNkZyCgwKGBGptJSC8iF6e96r/thumbnail.png"
+              src="https://stream.mux.com/f01uc8wFVNkZyCgwKGBGptJSC8iF6e96r/high.mp4"
+              class="rounded-2xl w-full h-full object-cover"
+            ></video>
+          </div>
+          <h4 class="text-xl font-medium">Ingångslön</h4>
+          <div class="mt-2">
+            <p
+              class="leading-[130%] text-chasBlack laptop:leading-[150%] laptop:text-[18px]"
+            >
+              Genomsnittlig ingångslön för nyexaminerade från Chas Academy 2020:
+              33 000 kr. Förväntad lön efter några år inom IT: 45 500 kr
+              (scb.se)
+            </p>
+          </div>
+        </div>
+        <div class="relative mb-6">
+          <div class="mb-6 laptop:mb-10">
+            <video
+              playsinline=""
+              autoplay=""
+              loop=""
+              type="video/mp4"
+              poster="https://image.mux.com/MSBkdyJsxX8UzvNjwTRkjX1MTNzS702005/thumbnail.png"
+              src="https://stream.mux.com/MSBkdyJsxX8UzvNjwTRkjX1MTNzS702005/high.mp4"
+              class="rounded-2xl w-full h-full object-cover"
+            ></video>
+          </div>
+          <h4 class="text-xl text-chasBlack font-medium">Sammarbetspartners</h4>
+          <div class="mt-2">
+            <p class="leading-[130%] laptop:leading-[150%] laptop:text-[18px]">
+              Vi ser dig som en uppskattad medarbetare på just den arbetsplats
+              där du vill vara, vare sig det är ett stort bolag, produktbolag,
+              start-up eller något annat. Spotify, Blizzard, Activision, Scania,
+              H&M och Polisen är några som vi samarbetar med.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--section 5 apply 2024-->
+    <div
+      class="flex flex-col py-14 px-6 laptop:px-20 laptop:py-[90px] bg-chasBlue"
+    >
+      <div
+        class="grid grid-cols-1 gap-[16px] w-full text-white laptop:grid-cols-12 big-screen:px-[10vw]"
+      >
+        <div
+          class="col-span-1 laptop:col-start-1 laptop:col-span-5 laptop:flex laptop:flex-col laptop:justify-center"
+        >
+          <div class="flex flex-col justify-center mb-10 laptop:col-start-1">
+            <h4
+              class="uppercase text-[16px] font-medium laptop:text-lg laptop:grid-cols"
+            >
+              Studera hos oss
+            </h4>
+            <h2
+              class="text-[38px] leading-[110%] mt-4 uppercase laptop:mt-5 laptop:text-[46px]"
+            >
+              Ansökan för program start HT23 är stängd!
+            </h2>
+          </div>
+          <div class="mt-[30px]">
+            <p class="leading-[130%] laptop:leading-[150%] laptop:text-[18px]">
+              Vi öppnar ansökan för program med start HT24 i februari 2024.
+            </p>
+          </div>
+          <div class="mt-[50px] flex flex-col w-fit">
+            <a href="">
+              <button
+                type="button"
+                class="border uppercase rounded-full px-8 py-3 font-medium mb-10 border-white hover:text-chasBlue hover:bg-white"
+              >
+                Hur ansöker jag?
+              </button>
+            </a>
+          </div>
+        </div>
+        <div class="col-span-1 laptop:col-start-7 laptop:col-span-6">
+          <video
+            playsinline=""
+            autoplay=""
+            loop=""
+            type="video/mp4"
+            poster="https://image.mux.com/lkvEa01NF3VhhoWoKirRgLv7t02IkNFV4J/thumbnail.png"
+            src="https://stream.mux.com/lkvEa01NF3VhhoWoKirRgLv7t02IkNFV4J/high.mp4"
+            class="rounded-2xl w-full h-full object-cover bg-blue"
+          ></video>
+        </div>
+      </div>
+    </div>
+    <!--section 6 - meet a student-->
+    <div class="sectionContainer bg-slate-50">
+      <div class="grid w-full grid-cols-1 tablet:grid-cols-12 gap-4">
+        <h2
+          class="text-[32px] text-chasBlack font-medium mb-10 uppercase tablet:text-center tablet:col-span-12 laptop:text-[40px] laptop:mb-[80px]"
+        >
+          Vad säger våra studenter?
+        </h2>
+        <div class="col-span-4 mb-16 tablet:col-span-4">
+          <div class="relative mb-6 laptop:mb-10">
+            <div class="relative overflow-hidden w-full max-w-[1560px]">
+              <img
+                class="block w-full"
+                src="assets/images/johannes.webp"
+                alt="box-img"
+              />
+            </div>
+          </div>
+          <h4 class="text-[18px] uppercase font-medium laptop:text-[20px]">
+            Kul och utmanande
+          </h4>
+          <q
+            class="text-chasBlack leading-[130%] laptop:leading-[150%] laptop:text-[18px]"
+          >
+            Jag valde Fullstack för att jag älskar utmaningar och det är bra
+            framtidsutsikter, raka motsatsen till det jag satt och gjorde när
+            jag sökte utbildningen. Det blev på Chas Academy för att jag hade
+            läst mycket bra om ledningen och gillar upplägget så nära närings-
+            och arbetslivet!
+          </q>
+          <br />
+          <br />
+          <p class="uppercase font-medium text-[18px]">- Johannes Lepsius</p>
+        </div>
+        <div class="col-span-4 mb-16 tablet:col-span-4">
+          <div class="relative mb-6">
+            <div class="relative overflow-hidden w-full max-w-[1560px]">
+              <img
+                class="box-img"
+                src="assets/images/Kleopatra.webp"
+                alt="box-img"
+              />
+            </div>
+          </div>
+
+          <h4 class="text-[18px] uppercase font-medium laptop:text-[20px]">
+            Bästa förutsättningarna
+          </h4>
+          <q
+            class="text-chasBlack leading-[130%] laptop:leading-[150%] laptop:text-[18px]"
+          >
+            För mig är det viktigt att skapa en bättre framtid för mig och de
+            framtida generationerna. Jag går andra året på Chas Academys
+            utbildning UX-designer med kravkompetens och får varje dag nya
+            kunskaper som kommer ge mig de förutsättningar jag behöver för att
+            kunna göra detta i mitt yrkesliv
+          </q>
+          <br />
+          <br />
+          <p class="uppercase font-medium text-[18px]">
+            - Kleopatra Papadopoulou
+          </p>
+        </div>
+        <div class="col-span-4 mb-16 tablet:col-span-4">
+          <div class="relative mb-6">
+            <div class="relative overflow-hidden w-full max-w-[1560px]">
+              <img
+                class="box-img"
+                src="assets/images/sebastian.webp"
+                alt="box-img"
+              />
+            </div>
+          </div>
+          <h4 class="text-[18px] uppercase font-medium laptop:text-[20px]">
+            Spännanade
+          </h4>
+          <q
+            class="text-chasBlack leading-[130%] laptop:leading-[150%] laptop:text-[18px]"
+          >
+            Programmering känns spännande och programmerare känns som ett yrke
+            med bra framtidsutsikter. Fullstack för att jag ville få en bra
+            bredd på kunskapen.
+          </q>
+          <br />
+          <br />
+          <p class="uppercase font-medium text-[18px]">
+            - Sebastian Gerstel Sollerman
+          </p>
+        </div>
+        <div class="col-span-4 mb-16 tablet:col-span-4">
+          <div class="relative mb-6">
+            <div class="relative overflow-hidden w-full max-w-[1560px]">
+              <img
+                class="box-img"
+                src="assets/images/Laila.webp"
+                alt="box-img"
+              />
+            </div>
+          </div>
+          <h4 class="text-[18px] uppercase font-medium laptop:text-[20px]">
+            KOMPETENSFÖRHÖJNING
+          </h4>
+          <q
+            class="text-chasBlack leading-[130%] laptop:leading-[150%] laptop:text-[18px]"
+          >
+            Jag är i grunden grafisk designer och illustratör men efter att jag
+            varit föräldraledig i två år ville jag fortsätta min professionella
+            utveckling. Jag stod då inför utmaningen att jag inte hade alla
+            behörigheter som behövdes från gymnasiet så då tog jag tag i att
+            plugga upp svenska, engelska och programmering C#. Jag tog även itu
+            med att bedöma min kandidatexamen i Konst samt gymnasiebetygen för
+            att visa min kompetens.. <br> <br>Nu befinner jag mig nästan i slutet av min
+            utbildning och jag arbetar som UX-designer hos Northvolt. Just nu
+            genomgår jag min sex månader långa provanställning hos dem.
+          </q>
+          <br />
+          <br />
+          <p class="uppercase font-medium text-[18px]">- Laila Arselan</p>
+        </div>
+        <div class="col-span-4 mb-16 tablet:col-span-4">
+          <div class="relative mb-6">
+            <div class="relative overflow-hidden w-full max-w-[1560px]">
+              <img
+                class="box-img"
+                src="assets/images/ludvig.webp"
+                alt="box-img"
+              />
+            </div>
+          </div>
+          <h4 class="text-[18px] uppercase font-medium laptop:text-[20px]">
+            ETT TYDLIGT KARRIÄRBYTE
+          </h4>
+          <q
+            class="text-chasBlack leading-[130%] laptop:leading-[150%] laptop:text-[18px]"
+          >
+            Efter att ha jobbat flera år på en ingenjörsfirma där jag kunde
+            utföra mitt jobb utantill började jag känna mig understimulerad. Jag
+            började med att söka enstaka kurser på universitetet och av en slump
+            kom jag in på programmering vilket jag upptäckte att jag hade en
+            fallenhet för och att det var väldigt roligt. Efter det sökte jag
+            program inom både fullstack och devops och kom tillslut in på DevOps
+            Engineer hos Chas Academy. <br><br> Nu är jag färdigutbildad DevOps Engineer
+            och är den första yh-studerande som blivit anställd hos Accenture.
+          </q>
+          <br />
+          <br />
+          <p class="uppercase font-medium text-[18px]">- Ludvig Ravelin</p>
+        </div>
+        <div class="col-span-4 mb-16 tablet:col-span-4">
+          <div class="relative mb-6">
+            <div class="relative overflow-hidden w-full max-w-[1560px]">
+              <img
+                class="box-img"
+                src="assets/images/sara.webp"
+                alt="box-img"
+              />
+            </div>
+          </div>
+          <h4 class="text-[18px] uppercase font-medium laptop:text-[20px]">
+            LIA SOM LEDER TILL JOBB
+          </h4>
+          <q
+            class="text-chasBlack leading-[130%] laptop:leading-[150%] laptop:text-[18px]"
+          >
+            Innan jag började plugga jobbade jag på Ica Maxi i Barkarby i
+            delikatessen och i fisken. Jag hade jobbat där i 2 år och innan det
+            var jag på en 6 månaders backpack-resa genom Sydostasien 2019. Jag
+            bestämde mig för att börja plugga eftersom jag kände att jag inte
+            längre utvecklades på jobbet jag hade och jag valde Chas Academy för
+            att min bror hade gått där innan och rekommenderade skolan till mig.<br><br>
+            Nu efter utbildningen har jag fått jobb på min praktikplats Bazooka
+            och jag börjar där efter sommaren.
+          </q>
+          <br />
+          <br />
+          <p class="uppercase font-medium text-[18px]">- Sara Abou-Dabous</p>
+        </div>
+      </div>
+    </div>
+    <!--section 7 - aktuellt-->
+    <div class="sectionContainer bg-white">
+      <h2
+        class="text-[32px] text-chasBlack font-medium mb-6 uppercase laptop:mb-[50px] laptop:text-[50px]"
+      >
+        Aktuellt
+      </h2>
+      <div class="grid grid-cols-1 tablet:grid-cols-2 gap-6 laptop:grid-cols-3">
+        <!--card-->
+        <div
+          class="tablet:mb-5 h-full bg-slate-50 flex flex-col justify-between rounded-[10px] min-h-[505px] laptop:min-h-[558px] pt-6 pb-[45px] px-4 border border-slate-50 hover:border-black hover:scale-[1.03] laptop:p-6"
+        >
+          <div>
+            <div class="relative max-w-[1080px] mb-6">
+              <img
+                src="assets/images/ludvig2.webp"
+                alt=""
+                class="max-h-[300px] w-full object-cover tablet:max-h-[196px]"
+              />
+            </div>
+            <h4
+              class="text-xl uppercase font-medium mb-[16px] leading-[110%] laptop:mb-2.5 laptop:text-[26px]"
+            >
+              Från tristess till drömyrket
+            </h4>
+            <div class="flex items-center flex-wrap mb-[14px]">
+              <p
+                class="bg-[#6EC4E4] rounded-[20px] text-[14px] px-4 uppercase py-0.5 mb-2.5"
+              >
+                Aktuellt
+              </p>
+            </div>
+            <div>
+              <p
+                class="leading-[130%] laptop:leading-[150%] laptop:line-clamp-3 laptop:text-[18px]"
+              >
+                Det finns många som går runt och funderar på hur livet hade sett
+                ut om de hade valt en annan väg. När livet blir slentrianmässigt
+                och ekorrhjulet snurrar på, så dyker frågan upp i huvudet: Vad
+                hade hänt om jag hade följt den där drömmen istället?
+              </p>
+            </div>
+          </div>
+          <button class="flex items-center mt-8">
+            <p class="uppercase text-[16px] mr-1.5">Läs mer</p>
+            <svg viewBox="0 0 13 9" class="w-[13px] h-2.5 hover:-right-4">
+              <path
+                d="M0.5 4C0.223858 4 0 4.22386 0 4.5C0 4.77614 0.223858 5 0.5 5L0.5 4ZM12.8536 4.85355C13.0488 4.65829 13.0488 4.34171 12.8536 4.14645L9.67157 0.964466C9.47631 0.769204 9.15973 0.769204 8.96447 0.964466C8.7692 1.15973 8.7692 1.47631 8.96447 1.67157L11.7929 4.5L8.96447 7.32843C8.7692 7.52369 8.7692 7.84027 8.96447 8.03553C9.15973 8.2308 9.47631 8.2308 9.67157 8.03553L12.8536 4.85355ZM0.5 5L12.5 5V4L0.5 4L0.5 5Z"
+                fill="var(--color-chas-black)"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <div
+          class="tablet:mb-5 h-full bg-slate-50 flex flex-col justify-between rounded-[10px] min-h-[505px] laptop:min-h-[558px] pt-6 pb-[45px] px-4 border border-slate-50 hover:border-black hover:scale-[1.03] laptop:p-6"
+        >
+          <div>
+            <div class="relative max-w-[1080px] mb-6">
+              <img
+                src="assets/images/jared.webp"
+                alt=""
+                class="max-h-[300px] w-full object-cover tablet:max-h-[196px]"
+              />
+            </div>
+            <h4
+              class="text-xl uppercase font-medium mb-[16px] leading-[110%] laptop:mb-2.5 laptop:text-[26px]"
+            >
+              Chas Talk med Jared Fossey
+            </h4>
+            <div class="flex items-center flex-wrap mb-[14px]">
+              <p
+                class="bg-chasBlue rounded-[20px] text-[14px] px-4 uppercase py-0.5 mr-2 mb-2.5"
+              >
+                Chas talks
+              </p>
+              <p
+                class="bg-[#6EC4E4] rounded-[20px] text-[14px] px-4 uppercase py-0.5 mb-2.5"
+              >
+                Aktuellt
+              </p>
+            </div>
+            <div>
+              <p
+                class="leading-[130%] laptop:leading-[150%] laptop:line-clamp-3 laptop:text-[18px]"
+              >
+                Jared's career is a journey driven by relentless curiosity. He's
+                explored various design roles across multiple countries,
+                currently serving as a UX Lead for Swedbank's Communication
+                Solutions team. His passion lies in integrating AI into finance,
+                emphasizing human-centered design and the importance of
+                continuous learning and documentation to demonstrate value in
+                the ever-evolving design landscape.
+              </p>
+            </div>
+          </div>
+
+          <button class="flex items-center mt-8">
+            <p class="uppercase text-[16px] mr-1.5">Läs mer</p>
+            <svg viewBox="0 0 13 9" class="w-[13px] h-2.5 hover:-right-4">
+              <path
+                d="M0.5 4C0.223858 4 0 4.22386 0 4.5C0 4.77614 0.223858 5 0.5 5L0.5 4ZM12.8536 4.85355C13.0488 4.65829 13.0488 4.34171 12.8536 4.14645L9.67157 0.964466C9.47631 0.769204 9.15973 0.769204 8.96447 0.964466C8.7692 1.15973 8.7692 1.47631 8.96447 1.67157L11.7929 4.5L8.96447 7.32843C8.7692 7.52369 8.7692 7.84027 8.96447 8.03553C9.15973 8.2308 9.47631 8.2308 9.67157 8.03553L12.8536 4.85355ZM0.5 5L12.5 5V4L0.5 4L0.5 5Z"
+                fill="var(--color-chas-black)"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <div
+          class="tablet:mb-5 h-full bg-slate-50 flex flex-col justify-between rounded-[10px] min-h-[505px] laptop:min-h-[558px] pt-6 pb-[45px] px-4 border border-slate-50 hover:border-black hover:scale-[1.03] laptop:p-6"
+        >
+          <div>
+            <div class="relative max-w-[1080px] mb-6">
+              <img
+                src="assets/images/jady.webp"
+                alt="Jady Di Giorgio"
+                class="max-h-[300px] w-full object-cover tablet:max-h-[196px]"
+              />
+            </div>
+            <h4
+              class="text-xl uppercase font-medium mb-[16px] leading-[110%] laptop:mb-2.5 laptop:text-[26px]"
+            >
+              Chas talks med Jady Di Giorgio
+            </h4>
+            <div class="flex items-center flex-wrap mb-[14px]">
+              <p
+                class="bg-chasBlue rounded-[20px] text-[14px] px-4 uppercase py-0.5 mr-2 mb-2.5"
+              >
+                Chas talks
+              </p>
+              <p
+                class="bg-[#6EC4E4] rounded-[20px] text-[14px] px-4 uppercase py-0.5 mb-2.5"
+              >
+                Aktuellt
+              </p>
+            </div>
+            <div>
+              <p
+                class="leading-[130%] laptop:leading-[150%] laptop:line-clamp-3 laptop:text-[18px]"
+              >
+                Från att ha jobba med värderingsdrivna startups inom femtech
+                till att vara konsult för globala företag, visar bredden av
+                Jadys erfarenhet i den digitala innovationsfronten.
+              </p>
+            </div>
+          </div>
+          <button class="flex items-center mt-8">
+            <p class="uppercase text-[16px] mr-1.5">Läs mer</p>
+            <svg viewBox="0 0 13 9" class="w-[13px] h-2.5 hover:-right-4">
+              <path
+                d="M0.5 4C0.223858 4 0 4.22386 0 4.5C0 4.77614 0.223858 5 0.5 5L0.5 4ZM12.8536 4.85355C13.0488 4.65829 13.0488 4.34171 12.8536 4.14645L9.67157 0.964466C9.47631 0.769204 9.15973 0.769204 8.96447 0.964466C8.7692 1.15973 8.7692 1.47631 8.96447 1.67157L11.7929 4.5L8.96447 7.32843C8.7692 7.52369 8.7692 7.84027 8.96447 8.03553C9.15973 8.2308 9.47631 8.2308 9.67157 8.03553L12.8536 4.85355ZM0.5 5L12.5 5V4L0.5 4L0.5 5Z"
+                fill="var(--color-chas-black)"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <div
+          class="tablet:mb-5 h-full bg-slate-50 flex flex-col justify-between rounded-[10px] min-h-[505px] laptop:min-h-[558px] pt-6 pb-[45px] px-4 border border-slate-50 hover:border-black hover:scale-[1.03] laptop:p-6"
+        >
+          <div>
+            <div class="relative max-w-[1080px] mb-6">
+              <img
+                src="assets/images/jesper.webp"
+                alt="Jesper Åström"
+                class="max-h-[300px] w-full object-cover tablet:max-h-[196px]"
+              />
+            </div>
+            <h4
+              class="text-xl uppercase font-medium mb-[16px] leading-[110%] laptop:mb-2.5 laptop:text-[26px]"
+            >
+              Chas talk med Jesper Åström
+            </h4>
+            <div class="flex items-center flex-wrap mb-[14px]">
+              <p
+                class="bg-chasBlue rounded-[20px] text-[14px] px-4 uppercase py-0.5 mr-2 mb-2.5"
+              >
+                Chas talks
+              </p>
+            </div>
+            <div>
+              <p
+                class="leading-[130%] laptop:leading-[150%] laptop:line-clamp-3 laptop:text-[18px]"
+              >
+                Idag satte vi igång med våra Chas Talks och ingen annan Jesper
+                Åström fick äran att vara först ut. Vi passade på att ställa
+                honom några frågor innan det satte igång och vi fick riktigt
+                intressanta svar!
+              </p>
+            </div>
+          </div>
+          <button class="flex items-center mt-8">
+            <p class="uppercase text-[16px] mr-1.5">Läs mer</p>
+            <svg viewBox="0 0 13 9" class="w-[13px] h-2.5 hover:-right-4">
+              <path
+                d="M0.5 4C0.223858 4 0 4.22386 0 4.5C0 4.77614 0.223858 5 0.5 5L0.5 4ZM12.8536 4.85355C13.0488 4.65829 13.0488 4.34171 12.8536 4.14645L9.67157 0.964466C9.47631 0.769204 9.15973 0.769204 8.96447 0.964466C8.7692 1.15973 8.7692 1.47631 8.96447 1.67157L11.7929 4.5L8.96447 7.32843C8.7692 7.52369 8.7692 7.84027 8.96447 8.03553C9.15973 8.2308 9.47631 8.2308 9.67157 8.03553L12.8536 4.85355ZM0.5 5L12.5 5V4L0.5 4L0.5 5Z"
+                fill="var(--color-chas-black)"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <div
+          class="tablet:mb-5 h-full bg-slate-50 flex flex-col justify-between rounded-[10px] min-h-[505px] laptop:min-h-[558px] pt-6 pb-[45px] px-4 border border-slate-50 hover:border-black hover:scale-[1.03] laptop:p-6"
+        >
+          <div>
+            <div class="relative max-w-[1080px] mb-6">
+              <img
+                src="assets/images/femSnabba.webp"
+                alt=""
+                class="max-h-[300px] w-full object-cover tablet:max-h-[196px]"
+              />
+            </div>
+            <h4
+              class="text-xl uppercase font-medium mb-[16px] leading-[110%] laptop:mb-2.5 laptop:text-[26px]"
+            >
+              5 snabba om chas extended academy!
+            </h4>
+            <div class="flex items-center flex-wrap mb-[14px]">
+              <p
+                class="bg-chasBlue rounded-[20px] text-[14px] px-4 uppercase py-0.5 mr-2 mb-2.5"
+              >
+                Chas talks
+              </p>
+              <p
+                class="bg-[#6EC4E4] rounded-[20px] text-[14px] px-4 uppercase py-0.5 mr-2 mb-2.5"
+              >
+                Aktuellt
+              </p>
+              <p
+                class="bg-[#AFD75E] rounded-[20px] text-[14px] px-4 uppercase py-0.5 mr-2 mb-2.5"
+              >
+                Program
+              </p>
+            </div>
+            <div>
+              <p
+                class="leading-[130%] laptop:leading-[150%] laptop:line-clamp-3 laptop:text-[18px]"
+              >
+                I september i år startade vi upp de första extended programmen,
+                ett koncept som vi byggt upp för att vi tror på flexibelt och
+                dynamiskt lärande där man får sammarbeta i team oavsett vilken
+                stad man bor i. Därför vill vi nu passa på att lyfta våra
+                Extended program genom att lyfta dessa med 5 snabba om extended.
+              </p>
+            </div>
+          </div>
+          <button class="flex items-center mt-8">
+            <p class="uppercase text-[16px] mr-1.5">Läs mer</p>
+            <svg viewBox="0 0 13 9" class="w-[13px] h-2.5 hover:-right-4">
+              <path
+                d="M0.5 4C0.223858 4 0 4.22386 0 4.5C0 4.77614 0.223858 5 0.5 5L0.5 4ZM12.8536 4.85355C13.0488 4.65829 13.0488 4.34171 12.8536 4.14645L9.67157 0.964466C9.47631 0.769204 9.15973 0.769204 8.96447 0.964466C8.7692 1.15973 8.7692 1.47631 8.96447 1.67157L11.7929 4.5L8.96447 7.32843C8.7692 7.52369 8.7692 7.84027 8.96447 8.03553C9.15973 8.2308 9.47631 8.2308 9.67157 8.03553L12.8536 4.85355ZM0.5 5L12.5 5V4L0.5 4L0.5 5Z"
+                fill="var(--color-chas-black)"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <div
+          class="tablet:mb-5 h-full bg-slate-50 flex flex-col justify-between rounded-[10px] min-h-[505px] laptop:min-h-[558px] pt-6 pb-[45px] px-4 border border-slate-50 hover:border-black hover:scale-[1.03] laptop:p-6"
+        >
+          <div>
+            <div class="relative max-w-[1080px] mb-6">
+              <img
+                src="assets/images/emanuel.webp"
+                alt="Emanuel Popa"
+                class="max-h-[300px] w-full object-cover tablet:max-h-[196px]"
+              />
+            </div>
+            <h4
+              class="text-xl uppercase font-medium mb-[16px] leading-[110%] laptop:mb-2.5 laptop:text-[26px]"
+            >
+              7 saker jag önskar jag visste innan jag började plugga
+            </h4>
+            <div class="flex items-center flex-wrap mb-[14px]">
+              <p
+                class="bg-[#FFBE68] rounded-[20px] text-[14px] px-4 uppercase py-0.5 mr-2 mb-2.5"
+              >
+                Antagning
+              </p>
+              <p
+                class="bg-chasBlue rounded-[20px] text-[14px] px-4 uppercase py-0.5 mr-2 mb-2.5"
+              >
+                Studerande
+              </p>
+              <p
+                class="bg-[#6EC4E4] rounded-[20px] text-[14px] px-4 uppercase py-0.5 mr-2 mb-2.5"
+              >
+                Aktuellt
+              </p>
+            </div>
+            <div>
+              <p
+                class="line-clamp-4 leading-[130%] laptop:leading-[150%] laptop:line-clamp-3 laptop:text-[18px]"
+              >
+                Ibland ser man tillbaka på något och tänker: “Tänk om jag hade
+                vetat det där innan, vad skönt det hade varit”. Och vi vet, det
+                är ibland klurigt med nya saker. Därför har vi frågat Emanuel
+                Popa, en av våra studerande, för att få reda på just det - vad
+                hade han velat veta innan han började sin utbildning på Chas
+                Academy. Med snart två utbildningar i bagaget kan Emanuel ge
+                många bra tips för att du skall känna dig så förberedd och
+                peppad inför din utbildning som möjligt.
+              </p>
+            </div>
+          </div>
+          <button class="flex items-center mt-8">
+            <p class="uppercase text-[16px] mr-1.5">Läs mer</p>
+            <svg viewBox="0 0 13 9" class="w-[13px] h-2.5 hover:-right-4">
+              <path
+                d="M0.5 4C0.223858 4 0 4.22386 0 4.5C0 4.77614 0.223858 5 0.5 5L0.5 4ZM12.8536 4.85355C13.0488 4.65829 13.0488 4.34171 12.8536 4.14645L9.67157 0.964466C9.47631 0.769204 9.15973 0.769204 8.96447 0.964466C8.7692 1.15973 8.7692 1.47631 8.96447 1.67157L11.7929 4.5L8.96447 7.32843C8.7692 7.52369 8.7692 7.84027 8.96447 8.03553C9.15973 8.2308 9.47631 8.2308 9.67157 8.03553L12.8536 4.85355ZM0.5 5L12.5 5V4L0.5 4L0.5 5Z"
+                fill="var(--color-chas-black)"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <!--end card-->
+        <button
+          class="btn mt-6 inline-block max-w-[194px] hover:bg-chasBlack hover:text-white"
+        >
+          Se alla artiklar
+        </button>
+      </div>
+    </div>
+    <!--footer-->
+    <footer class="relative w-full m-auto flex flex-col">
+      <div class="w-full laptop:h-[436px]">
+        <!--first-->
+        <!--blue img bg
+            <img
+              src="assets/images/footerBg.webp"
+              alt=""
+              class="block origin-top rotate-[3deg] bg-cover h-[300px] laptop:h-[103%] laptop:bottom-0 w-full overflow-hidden absolute"
+            />
+            <div
+              class="h-full w-full px-6 pb-6 flex flex-col justify-end absolute laptop:p-0 laptop:m-5 laptop:z-10 laptop:mt-[156px] laptop:inline-block laptop:max-w-[278px]"
+            >
+              <span class="uppercase leading-[120%] max-w-[70%] text-chasBlack text-2xl mr-0 font-medium laptop:text-[32px]">
+                Vill du jobba inom världens bästa bransch?
+              </span>
+              <a href="/" class="mt-4 laptop:mb-0">
+                <button
+                  class="btn min-w-[130px] hover:bg-chasBlack hover:text-white laptop:mt-12"
+                >
+                  Ansök nu
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      -->
+        <!--here-->
+        <div
+          class="h-[300px] relative transform -translate-y-4 laptop:w-[33.5%] laptop:h-full laptop:top-[+41px] laptop:mt-[-41px] laptop:bg-cover laptop:absolute"
+        >
+          <div class="static overflow-x-hidden w-full h-full laptop:absolute">
+            <div
+              class="overflow-hidden max-w-[2024px] w-[120%] h-full laptop:relative laptop:flex laptop:items-center laptop:justify-center"
+            >
+              <!--blue img bg-->
+              <img
+                src="assets/images/footerBg.webp"
+                alt=""
+                class="block origin-top rotate-[3deg] bg-cover h-[300px] laptop:h-[103%] laptop:bottom-0 w-full overflow-hidden absolute"
+              />
+              <div
+                class="w-full pt-20 px-6 pb-6 flex flex-col justify-end absolute tablet:px-20 tablet:pb-16 tablet:flex-row laptop:p-0 laptop:m-0 laptop:mr-[20%] laptop:z-10 laptop:mt-[56px] laptop:inline-block laptop:items-center laptop:justify-center laptop:max-w-[278px]"
+              >
+                <span
+                  class="laptop:text-center uppercase leading-[120%] max-w-[70%] text-chasBlack text-2xl mr-0 font-medium tablet:mr-[10%] tablet:text-[46px] tablet:font-medium laptop:text-[32px]"
+                >
+                  Vill du jobba inom världens bästa bransch?
+                </span>
+                <a href="/" class="mt-4 tablet:mt-auto tablet:mb-3 laptop:mb-0">
+                  <button
+                    class="btn min-w-[130px] hover:bg-chasBlack hover:text-white tablet:min-w-[170px] laptop:mt-12"
+                  >
+                    Ansök nu
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--home, contact, social-->
+        <div
+          class="flex pt-0 pb-6 px-6 justify-between items-end bg-slate-50 tablet:items-stretch tablet:px-20 tablet:pb-16 tablet:pt-6 laptop:pl-[38.5%]"
+        >
+          <div class="tablet:flex">
+            <!--contact also - baseline-->
+            <!--home-->
+            <div
+              class="mb-[46px] mr-[6vw] leading-[130%] font-medium tablet:uppercase tablet:mb-0 text-[16px] tablet:text-xl laptop:text-[18px] laptop:normal-case"
+            >
+              <a href="/" class="hover:text-slate-400">
+                <p class="mb-[18px] mt-10 tablet:mt-0">Hem</p>
+              </a>
+              <a href="" class="hover:text-slate-400">
+                <p class="mb-[18px]">YH-Program</p>
+              </a>
+              <a href="" class="hover:text-slate-400">
+                <p class="mb-[18px]">Om oss</p>
+              </a>
+              <a href="" class="hover:text-slate-400">
+                <p class="mb-[18px]">Så ansöker du</p>
+              </a>
+              <a href="" class="hover:text-slate-400">
+                <p class="mb-[18px]">Kontakt</p>
+              </a>
+              <a href="" class="hover:text-slate-400">
+                <p class="mb-[18px]">Aktuellt</p>
+              </a>
+              <a href="" class="hover:text-slate-400">
+                <p class="mb-[18px]">Integritetspolicy</p>
+              </a>
+              <a href="" class="hover:text-slate-400">
+                <p class="">Jobba hos oss</p>
+              </a>
+            </div>
+            <!--contact-->
+            <div class="flex flex-col justify-between">
+              <div
+                class="tablet:flex tablet:flex-col tablet:flex-grow tablet:justify-between"
+              >
+                <div class="">
+                  <p
+                    class="leading-[130%] mb-4 font-medium tablet:uppercase tablet:text-xl laptop:text-[18px] laptop:normal-case"
+                  >
+                    Kontakta oss:
+                  </p>
+                  <p class="mb-2 tablet:text-lg">Mail</p>
+                  <a target="" class="text-chasBlack hover:text-slate-400"
+                    >info@chasacademy.se</a
+                  >
+                  <p class="mb-2 mt-5 tablet:text-lg">Adress</p>
+                  <p class="text-chasBlack tablet:text-lg">Arenavägen 61</p>
+                  <p class="text-chasBlack tablet:text-lg">
+                    121 77 Johanneshov
+                  </p>
+                </div>
+                <div class="tablet:items-baseline">
+                  <a href="">
+                    <button
+                      class="border border-chasBlack mt-12 rounded-full px-14 text-sm py-2 hover:bg-chasBlack hover:text-slate-300 tablet:mt-0"
+                    >
+                      canvas
+                    </button>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--social media-->
+          <div class="flex flex-col items-center justify-between">
+            <div
+              class="svg-container order-2 tablet:order-1 fill-[#6EC4E4] text-[#6EC4E4] w-[25vw] z-20 h-[25vw] max-w-[200px] max-h-[200px] laptop:w-[13.2vw] laptop:h-[13.2vw]"
+              id="svg-container"
+            ></div>
+
+            <div
+              class="order-1 flex flex-col items-center tablet:order-2 tablet:mb-0"
+            >
+              <p
+                class="uppercase text-[24px] mt-[45px] font-medium mb-4 tablet:text-lg"
+              >
+                Följ oss
+              </p>
+              <div
+                class="mb-[42px] flex flex-col items-center tablet:flex-row tablet:mb-0 tablet:gap-6"
+              >
+                <div class="mb-6 tablet:mb-0">
+                  <a class="" href="/" title="facebook">
+                    <i
+                      class="icon fa-brands fa-facebook text-[#6EC4E4] text-[38px]"
+                    ></i>
+                  </a>
+                </div>
+                <div class="mb-6 tablet:mb-0">
+                  <a
+                    class="items-center justify-center"
+                    href="/"
+                    title="instagram"
+                  >
+                    <i
+                      class="icon fa-brands fa-instagram text-[#6EC4E4] text-[38px]"
+                    ></i>
+                  </a>
+                </div>
+                <div class="mb-6 tablet:mb-0">
+                  <a class="" href="/" title="youtube">
+                    <i
+                      class="fa-brands fa-youtube text-[#6EC4E4] text-[38px]"
+                    ></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="px-6 py-2 relative text-center bg-[#D4D4D4]">
+        <p class="uppercase">upphovsrätt....</p>
+      </div>
+    </footer>
+    <script src="hamburgerMenu.js"></script>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
